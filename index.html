@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="titulo-carrusel text-center mb-4">
-  <h1><strong>El Aniquilador del Hambre</strong></h1>
+  <h1><strong>El Aniquilador del Hambre.</strong></h1>
     <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
@@ -135,7 +135,7 @@
 </div>
 <!-- Historia del local -->
 <div class="container my-5">
-    <h1 class="text-center">Nuestra Historia</h1>
+    <h1 class="text-center">Nuestra Historia.</h1>
     <div class="row align-items-center">
       <div class="col-md-6">
         <div class="cuadro-texto-historia    p-4">
@@ -159,7 +159,7 @@
   <div class="row">
     <!-- Testimonios -->
     <div class="col-md-6">
-      <h2 class="text-start">Lo que dicen nuestros clientes</h2>
+      <h2 class="text-start">Lo que dicen nuestros clientes.</h2>
       <div class="card mb-4 shadow-sm text-center">
         <img src="imagenes/usuario.jpg" class="foto-usuario mx-auto mt-3" alt="Camilo Rojas">
         <div class="card-body">
@@ -178,9 +178,9 @@
 
     <!-- Sucursal Valdivia -->
     <div class="col-md-6">
-      <h2 class="text-center mb-4">Nuestras Sucursales</h2>
+      <h2 class="text-center mb-4">Nuestras Sucursales.</h2>
         <div class="card card-sucursal shadow p-3 mb-4 w-100" style="max-width: none; height: auto;">
-            <h4 class="text-center">Sucursal Valdivia</h4>
+            <h4 class="text-center">Sucursal Valdivia.</h4>
             <div class="img-pair">
             <img src="imagenes/local1_f1.jpg" alt="Sucursal Valdivia 1">
             <img src="imagenes/local1_f2.jpg" alt="Sucursal Valdivia 2">
@@ -198,7 +198,7 @@
     <!-- Osorno -->
     <div class="col-md-6">
         <div class="card card-sucursal card-sucursal-secundaria">
-        <h4 class="text-center">Sucursal Osorno</h4>
+        <h4 class="text-center">Sucursal Osorno.</h4>
         <div class="img-pair">
           <img src="imagenes/local2_f1.jpg" alt="Sucursal Osorno 1">
           <img src="imagenes/local2_f2.jpg" alt="Sucursal Osorno 2">
@@ -213,7 +213,7 @@
     <!-- Puerto Montt -->
     <div class="col-md-6">
         <div class="card card-sucursal card-sucursal-secundaria">
-        <h4 class="text-center">Sucursal Puerto Montt</h4>
+        <h4 class="text-center">Sucursal Puerto Montt.</h4>
         <div class="img-pair">
           <img src="imagenes/local3_f1.jpg" alt="Sucursal Puerto Montt 1">
           <img src="imagenes/local3_f2.jpg" alt="Sucursal Puerto Montt 2">
@@ -227,6 +227,74 @@
     </div>
   </div>
 </div>
+<!-- Formulario de Contacto -->
+<section id="contacto" style="margin-top: 40px;">
+  <h2 style="text-align: center; color: #8B0000;">Formulario de Contacto.</h2>
+  <form id="formularioContacto">
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" name="tipo" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="consulta">Consulta</option>
+      <option value="reclamo">Reclamo</option>
+    </select>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+    <p id="mensajeError"></p>
+  </form>
+</section>
+  
+  <!-- Validación -->
+  <script>
+    document.getElementById("formularioContacto").addEventListener("submit", function(event) {
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const tipo = document.getElementById("tipo").value;
+      const mensaje = document.getElementById("mensaje").value.trim();
+      const mensajeError = document.getElementById("mensajeError");
+  
+      if (!nombre || !correo || !telefono || !tipo || !mensaje) {
+        event.preventDefault();
+        mensajeError.textContent = "Por favor, completa todos los campos del formulario.";
+      } else {
+        mensajeError.textContent = "";
+      }
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="text-center mt-4 p-4 bg-dark text-white">
+    <div class="container">
+      <h5>Contáctanos</h5>
+      <p><strong>Sucursal Valdivia:</strong> García Reyes 455, Valdivia | +56 63 212 3456</p>
+      <p><strong>Sucursal Osorno:</strong> Arturo Prat 1137, Osorno | +56 64 233 4455</p>
+      <p><strong>Sucursal Puerto Montt:</strong> Rengifo 952, Puerto Montt | +56 65 266 7788</p>
+  
+      <div class="mt-3">
+        <h6>Síguenos en redes sociales:</h6>
+        <a href="https://www.facebook.com/" target="_blank" class="text-white me-3">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white me-3">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+        <a href="https://www.twitter.com/" target="_blank" class="text-white">
+          <i class="bi bi-twitter-x"></i> Twitter
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-    background-color: #858688;
+    background-color: #bcbec1;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -7,6 +7,9 @@ body {
 h1, h2, h3 {
     color: darkred;
     font-weight: 500;
+}
+h2 {
+  margin-bottom: 1.5rem;
 }
 
 .carousel-control-prev-icon,
@@ -28,7 +31,7 @@ h1, h2, h3 {
     align-items: stretch;
     flex-wrap: nowrap;
     gap: 15px;
-  }
+}
 
 .carousel-caption {
     position: static !important;
@@ -38,7 +41,7 @@ h1, h2, h3 {
     border-radius: 10px;
     text-align: center;
     margin-top: 10px;
-  }
+}
 
   .img-carrusel {
     width: 100%;
@@ -48,15 +51,12 @@ h1, h2, h3 {
     border-radius: 10px;
     background-color: #fff;
     display: block;
-  }
+}
 
 .carousel-item .col-md-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-h2 {
-  margin-bottom: 1.5rem;
 }
 
 .container p {
@@ -68,16 +68,16 @@ h2 {
     border: 2px solid #dee2e6;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
+}
 .img-historia {
   width: 90%;
-  max-width: 500px; /* tamaño máximo para evitar que se vea muy ancha */
+  max-width: 500px; 
   height: auto;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: block;
-  margin: 0 auto; /* centrado horizontal */
+  margin: 0 auto;
 }
 .card {
   width: 100%;
@@ -95,14 +95,14 @@ h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-  }
+}
   
   .card-sucursal .img-pair {
     display: flex;
     justify-content: space-between;
     gap: 4%;
     margin-bottom: 1rem;
-  }
+}
   
 .card-sucursal {
   max-width: 80%;
@@ -115,4 +115,68 @@ h2 {
 .card-sucursal-secundaria {
   max-width: 640px; 
   margin-left: 30px;
+}
+
+#contacto {
+  background-color: #bcbec1;
+  padding: 20px 10px;
+}
+
+#formularioContacto {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgb(247, 245, 245);
+  padding: 10px; 
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr; 
+  row-gap: 3px; 
+}
+
+#formularioContacto label {
+  font-weight: bold;
+  margin-bottom: 2px; 
+  display: block;
+}
+
+#formularioContacto input,
+#formularioContacto select,
+#formularioContacto textarea {
+  width: 100%;
+  padding: 6px; 
+  border: 1px solid #0f0c0c;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px; 
+  margin-bottom: 4px; 
+}
+
+#formularioContacto textarea {
+  grid-column: 1 / -1; 
+  resize: vertical;
+  min-height: 60px; 
+}
+
+#formularioContacto button {
+  grid-column: 1 / -1;
+  padding: 8px;
+  background-color: #8b0000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#formularioContacto button:hover {
+  background-color: #a10000;
+}
+
+#mensajeError {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }
